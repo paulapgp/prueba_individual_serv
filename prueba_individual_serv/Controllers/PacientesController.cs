@@ -11,9 +11,11 @@ using System.Web.Http.Description;
 using prueba_individual_serv.Models;
 using prueba_individual_serv.Services;
 using prueba_individual_serv.Exceptions;
+using System.Web.Http.Cors;
 
 namespace prueba_individual_serv.Controllers
 {
+    [EnableCors(origins: "http://localhost:8081, http://localhost:8080", headers: "*", methods: "*")]
     public class PacientesController : ApiController
     {
         private IPacienteService pacienteService;
